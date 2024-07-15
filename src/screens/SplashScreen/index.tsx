@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Animated} from 'react-native';
+import {View, Animated, Image} from 'react-native';
 import {styles} from './style';
 
 const SplashScreen = ({navigation}: any) => {
@@ -22,15 +22,16 @@ const SplashScreen = ({navigation}: any) => {
     ).start();
 
     setTimeout(() => {
-      navigation.replace('Tab');
+      navigation.replace('Login');
     }, 3000);
   }, [fadeAnim, navigation]);
 
   return (
     <View style={styles.container}>
-      <Animated.Text style={[styles.logoText, {opacity: fadeAnim}]}>
-        NSC
-      </Animated.Text>
+      <Animated.Image 
+        source={require('../../assets/icon.png')} 
+        style={[styles.logoImage, {opacity: fadeAnim}]}
+      />
     </View>
   );
 };

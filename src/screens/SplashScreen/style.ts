@@ -8,9 +8,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  logoText: {
-    color: COLORS.Orange,
-    fontSize: FONTSIZE.size_42,
-    fontFamily: 'Poppins-Bold',
+  logoImage: {
+    width: 600,
+    height: 600,
+    resizeMode: 'contain',
   },
 });
